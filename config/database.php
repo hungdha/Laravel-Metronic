@@ -54,7 +54,7 @@ return [
 			'database' => storage_path().'/database.sqlite3',
 			'prefix'   => '',
 		],
-		/*
+		
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', env('OPENSHIFT_MYSQL_DB_HOST', 'localhost')),
@@ -67,7 +67,7 @@ return [
 			'prefix'    => '',
 			'strict'    => false,
 		],
-		*/
+		/*
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
@@ -80,6 +80,7 @@ return [
 			'prefix'    => '',
 			'strict'    => false,
 		],
+		*/
 		'pgsql' => [
 			'driver'   => 'pgsql',
 			'host'     => env('DB_HOST', env('OPENSHIFT_POSTGRESQL_DB_HOST', 'localhost')),
