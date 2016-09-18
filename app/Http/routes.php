@@ -14,8 +14,8 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
-
+Route::get('user/{username}/profile', 'Auth\UserController@profile');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+	'password' => 'Auth\PasswordController'
 ]);

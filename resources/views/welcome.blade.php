@@ -3,7 +3,6 @@
 		<title>Laravel</title>
 		
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-
 		<style>
 			body {
 				margin: 0;
@@ -35,14 +34,44 @@
 			.quote {
 				font-size: 24px;
 			}
+			ul.registerlogin{
+				list-style: none;
+			    text-align: center;
+			    width: 100%;
+			    float: left;
+			}
+			ul.registerlogin li{
+			    float: left;
+    			margin: 0 10px;
+    			width: 35%;
+			}
+			ul.registerlogin li.login{
+			    text-align: left;
+			}
+			ul.registerlogin li.register{
+				text-align: right;
+			}
+
+			ul.registerlogin li a{
+		        text-decoration: none;
+			    font-size: 18px;
+			    text-align: center;
+			    font-weight: 600;
+			    color: #f3f3f3;
+			}
+
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
-				<div><?php phpinfo(); ?></div>
+				<div class="title">Hello Laravel 5</div>				
+				<div class="link" >
+					<ul class="registerlogin">						
+						<li class="register"><a href="{{ url('/auth/register') }}">Register</a></li>
+						<li class="login"><a href="{{ url('/auth/login') }}">Login</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</body>
