@@ -80,7 +80,7 @@ return [
 			'prefix'    => '',
 			'strict'    => false,
 		],
-		*/
+*/
 		'pgsql' => [
 			'driver'   => 'pgsql',
 			'host'     => env('DB_HOST', env('OPENSHIFT_POSTGRESQL_DB_HOST', 'localhost')),
