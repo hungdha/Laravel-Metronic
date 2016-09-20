@@ -15,6 +15,7 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 Route::get('user/{username}/profile', 'Auth\UserController@profile');
+Route::any('user/{username}/edit', 'Auth\UserController@update');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController'
