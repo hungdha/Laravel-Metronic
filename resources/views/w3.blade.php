@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
-<title>W3Schools Online Web Tutorials</title>
+<title>Online Web Tutorials</title>
 
 <!-- Mirrored from www.w3schools.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 05:30:35 GMT -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,DOM,jQuery,ASP,PHP,SQL,XML,Bootstrap,Web,W3C,tutorials,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,colors,demos,tips,w3c">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="{{ asset('assets/lib/w3.css')}}">
+<link rel="stylesheet" href="{{ asset('sites/lib/w3.css')}}">
 <script>
 (function() {
   var cx = '012971019331610648934:m2tou3_miwy';
@@ -240,14 +239,14 @@ footer a {
   z-index:9999;
 }
 @font-face {
-font-family: 'fontawesome';
-src:url('{{asset('assets/lib/fonts/fontawesome8deb.eot?14663396')}}');
-src:url('{{asset('assets/lib/fonts/fontawesome8deb.eot?14663396#iefix')}}') format('embedded-opentype'),
-    url('{{asset('assets/lib/fonts/fontawesome8deb.woff?14663396')}}') format('woff'),
-    url('{{asset('assets/lib/fonts/fontawesome8deb.ttf?14663396')}}') format('truetype'),
-    url('{{asset('assets/lib/fonts/fontawesome8deb.svg?14663396#fontawesome')}}') format('svg');
-font-weight:normal;
-font-style:normal;
+	font-family: 'fontawesome';
+	src:url('{{asset('sites/lib/fonts/fontawesome8deb.eot?14663396')}}');
+	src:url('{{asset('sites/lib/fonts/fontawesome8deb.eot?14663396#iefix')}}') format('embedded-opentype'),
+	    url('{{asset('sites/lib/fonts/fontawesome8deb.woff?14663396')}}') format('woff'),
+	    url('{{asset('sites/lib/fonts/fontawesome8deb.ttf?14663396')}}') format('truetype'),
+	    url('{{asset('sites/lib/fonts/fontawesome8deb.svg?14663396#fontawesome')}}') format('svg');
+	font-weight:normal;
+	font-style:normal;
 }
 .fa {
   display:inline-block;
@@ -275,11 +274,20 @@ font-style:normal;
 
 @media only screen and (min-width :1100px) {
   #main {
-    margin-left:230px;
+    margin-left:0px;
   }
   #sidemenu {
     width:230px;
     display:block;
+  }
+  .w3-auth{
+    display: block;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    text-align: right;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width :992px) {
@@ -319,6 +327,15 @@ font-style:normal;
   }
   .css-hide-when-small {
     display:none;
+  }
+  .w3-auth{
+    display: block;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    text-align: right;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -365,25 +382,42 @@ font-style:normal;
   .w3-dropnav .w3-col {
     height:auto;
   }
+  .w3-auth{
+    display: block;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 14px;
+  }
+
 }
 .w3-theme {
   color:#fff !important;
-  background-color:#4CAF50 !important;
+  /*background-color:#4CAF50 !important;*/
+  background-color:#62A8EA !important;
+}
+.w3-auth{
+  display: none;
 }
 </style>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<body>
-
+<body class="hunglv-creater" >
+<div class="w3-auth" >
+	<a href="{{ url('/auth/register') }}" class="w3-btn w3-theme" >Register</a>
+	<a href="{{ url('/auth/login') }}" class="w3-btn">Sign In</a>
+</div>
 <div class='w3-container top'>
+	<!--<a href='http://www.w3schools.com'><img src='/images/w3schools.png' alt='W3Schools.com' class='w3-fluid'></a>-->
+	
+	<a class='w3schools-logo' href='/'>ws</a>
 
-<!--<a href='http://www.w3schools.com'><img src='/images/w3schools.png' alt='W3Schools.com' class='w3-fluid'></a>-->
-
-<a class='w3schools-logo' href='index.html'>schools<span class='dotcom'>.com</span></a>
-
-<div class='w3-right toptext w3-wide'>THE WORLD'S LARGEST WEB DEVELOPER SITE</div></div>
+	<div class='w3-right toptext w3-wide'>THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
+</div>
 
 <div class="w3-theme w3-card-2 w3-topnav w3-right-align w3-slim">
   <a id="menubtn" href='javascript:void(0);' class='topnav-localicons w3-left' onclick='w3_open()' title='Menu'>&#9776;</a>
@@ -412,42 +446,42 @@ font-style:normal;
   <span onclick="w3_close_nav('tutorials')" class="w3-closebtn w3-xlarge">&times;</span><br>
   <div class="w3-row-padding">
     <div class="w3-col m4">
-    <h3>HTML and CSS</h3>
-    <a href="html/default.html">Learn HTML</a>
-    <a href="css/default.html">Learn CSS</a>
-    <a href="w3css/default.html">Learn W3.CSS</a>
-    <a href="colors/default.html">Learn Colors</a>
-    <a href="bootstrap/default.html">Learn Bootstrap</a>
-    <h3>HTML Graphics</h3>
-    <a href="canvas/default.html">Learn Canvas</a>
-    <a href="svg/default.html">Learn SVG</a>
-    <a href="icons/default.html">Learn Icons</a>
-    <a href="googleapi/default.html">Learn Google Maps</a>
-    <a href="games/default.html">Learn HTML Games</a>    
+	    <h3>HTML and CSS</h3>
+	    <a href="html/default.html">Learn HTML</a>
+	    <a href="css/default.html">Learn CSS</a>
+	    <a href="w3css/default.html">Learn W3.CSS</a>
+	    <a href="colors/default.html">Learn Colors</a>
+	    <a href="bootstrap/default.html">Learn Bootstrap</a>
+	    <h3>HTML Graphics</h3>
+	    <a href="canvas/default.html">Learn Canvas</a>
+	    <a href="svg/default.html">Learn SVG</a>
+	    <a href="icons/default.html">Learn Icons</a>
+	    <a href="googleapi/default.html">Learn Google Maps</a>
+	    <a href="games/default.html">Learn HTML Games</a>    
     </div>
     <div class="w3-col m4">    
-    <h3>JavaScript</h3>
-    <a href="js/default.html">Learn JavaScript</a>
-    <a href="jquery/default.html">Learn jQuery</a>
-    <a href="jquerymobile/default.html">Learn jQueryMobile</a>
-    <a href="appml/default.html">Learn AppML</a>
-    <a href="angular/default.html">Learn AngularJS</a>
-    <a href="json/default.html">Learn JSON</a>
-    <h3>XML Tutorials</h3>
-    <a href="xml/default.html">Learn XML</a>
-    <a href="xsl/default.html">Learn XSLT</a>
-    <a href="ajax/default.html">Learn AJAX</a>
+	    <h3>JavaScript</h3>
+	    <a href="js/default.html">Learn JavaScript</a>
+	    <a href="jquery/default.html">Learn jQuery</a>
+	    <a href="jquerymobile/default.html">Learn jQueryMobile</a>
+	    <a href="appml/default.html">Learn AppML</a>
+	    <a href="angular/default.html">Learn AngularJS</a>
+	    <a href="json/default.html">Learn JSON</a>
+	    <h3>XML Tutorials</h3>
+	    <a href="xml/default.html">Learn XML</a>
+	    <a href="xsl/default.html">Learn XSLT</a>
+	    <a href="ajax/default.html">Learn AJAX</a>
     </div>
     <div class="w3-col m4">    
-    <h3>Server Side</h3>
-    <a href="sql/default.html">Learn SQL</a>
-    <a href="php/default.html">Learn PHP</a>
-    <a href="asp/default.html">Learn ASP</a>
-    <a href="aspnet/default.html">Learn ASP.NET</a>
-    <h3>Web Building</h3>
-    <a href="website/default.html">Web Building</a>
-    <a href="browsers/default.html">Web Statistics</a>
-    <a href="cert/default.html">Web Certificates</a>
+	    <h3>Server Side</h3>
+	    <a href="sql/default.html">Learn SQL</a>
+	    <a href="php/default.html">Learn PHP</a>
+	    <a href="asp/default.html">Learn ASP</a>
+	    <a href="aspnet/default.html">Learn ASP.NET</a>
+	    <h3>Web Building</h3>
+	    <a href="website/default.html">Web Building</a>
+	    <a href="browsers/default.html">Web Statistics</a>
+	    <a href="cert/default.html">Web Certificates</a>
     </div>
   </div>
 </nav>
@@ -551,40 +585,40 @@ font-style:normal;
   <br>
 </nav>
 
-<nav id="sidemenu" class="w3-sidenav w3-card-2 w3-animate-left">
-<a href="javascript:void(0)" onclick="w3_close()" class="w3-closebtn w3-large">&times;</a><br>
-<h2>HTML and CSS</h2>
-<a href="html/default.html">Learn HTML</a>
-<a href="css/default.html">Learn CSS</a>
-<a href="w3css/default.html">Learn W3.CSS</a>
-<a href="colors/default.html">Learn Colors</a>
-<a href="bootstrap/default.html">Learn Bootstrap</a>
-<h2>JavaScript</h2>
-<a href="js/default.html">Learn JavaScript</a>
-<a href="jquery/default.html">Learn jQuery</a>
-<a href="jquerymobile/default.html">Learn jQueryMobile</a>
-<a href="appml/default.html">Learn AppML</a>
-<a href="angular/default.html">Learn AngularJS</a>
-<a href="json/default.html">Learn JSON</a>
-<h2>HTML Graphics</h2>
-<a href="canvas/default.html">Learn Canvas</a>
-<a href="svg/default.html">Learn SVG</a>
-<a href="icons/default.html">Learn Icons</a>
-<a href="googleapi/default.html">Learn Google Maps</a>
-<a href="games/default.html">Learn HTML Games</a>
-<h2>Server Side</h2>
-<a href="sql/default.html">Learn SQL</a>
-<a href="php/default.html">Learn PHP</a>
-<a href="asp/default.html">Learn ASP</a>
-<a href="aspnet/default.html">Learn ASP.NET</a>
-<h2>Web Building</h2>
-<a href="website/default.html">Web Building</a>
-<a href="browsers/default.html">Web Statistics</a>
-<a href="cert/default.html">Web Certificates</a>
-<h2>XML Tutorials</h2>
-<a href="xml/default.html">Learn XML</a>
-<a href="xsl/default.html">Learn XSLT</a>
-<a href="ajax/default.html">Learn AJAX</a>
+<nav id="sidemenu" class="w3-sidenav w3-card-2 w3-animate-left" style="display:none;">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-closebtn w3-large">&times;</a><br>
+	<h2>HTML and CSS</h2>
+	<a href="html/default.html">Learn HTML</a>
+	<a href="css/default.html">Learn CSS</a>
+	<a href="w3css/default.html">Learn W3.CSS</a>
+	<a href="colors/default.html">Learn Colors</a>
+	<a href="bootstrap/default.html">Learn Bootstrap</a>
+	<h2>JavaScript</h2>
+	<a href="js/default.html">Learn JavaScript</a>
+	<a href="jquery/default.html">Learn jQuery</a>
+	<a href="jquerymobile/default.html">Learn jQueryMobile</a>
+	<a href="appml/default.html">Learn AppML</a>
+	<a href="angular/default.html">Learn AngularJS</a>
+	<a href="json/default.html">Learn JSON</a>
+	<h2>HTML Graphics</h2>
+	<a href="canvas/default.html">Learn Canvas</a>
+	<a href="svg/default.html">Learn SVG</a>
+	<a href="icons/default.html">Learn Icons</a>
+	<a href="googleapi/default.html">Learn Google Maps</a>
+	<a href="games/default.html">Learn HTML Games</a>
+	<h2>Server Side</h2>
+	<a href="sql/default.html">Learn SQL</a>
+	<a href="php/default.html">Learn PHP</a>
+	<a href="asp/default.html">Learn ASP</a>
+	<a href="aspnet/default.html">Learn ASP.NET</a>
+	<h2>Web Building</h2>
+	<a href="website/default.html">Web Building</a>
+	<a href="browsers/default.html">Web Statistics</a>
+	<a href="cert/default.html">Web Certificates</a>
+	<h2>XML Tutorials</h2>
+	<a href="xml/default.html">Learn XML</a>
+	<a href="xsl/default.html">Learn XSLT</a>
+	<a href="ajax/default.html">Learn AJAX</a>
 </nav>
 
 <div id="main">
@@ -691,7 +725,7 @@ font-style:normal;
   </div>
   <div class="w3-col l4 w3-center section onethird">
   <h2>Color Picker</h2>
-  <a href="colors/colors_picker.html"><img style="width:150px;height:128px;" src="{{ asset('assets/images/colorpicker.png')}}"></a>
+  <a href="colors/colors_picker.html"><img style="width:150px;height:128px;" src="{{ asset('sites/images/colorpicker.png')}}"></a>
   </div>
   <div class="w3-col l4 w3-center section onethird">
   <h2>Bootstrap</h2>
@@ -801,7 +835,7 @@ function hideFBLike() {
   document.getElementById("fblikeframe").style.display='none'
 }
 </script>
-<script src="{{ asset('assets/lib/w3codecolors.js')}}"></script>
+<script src="{{ asset('sites/lib/w3codecolors.js')}}"></script>
 <script src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
 </body>
 
