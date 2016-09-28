@@ -7,7 +7,7 @@
   <meta name="description" content="bootstrap admin template">
   <meta name="author" content="">
 
-  <title>Login | Remark Admin Template</title>
+  <title>Login | HUGELZ Admin</title>
 
   <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png')}}')}}">
   <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico')}}">
@@ -61,8 +61,8 @@
   data-animsition-out="fade-out">>
     <div class="page-content vertical-align-middle">
       <div class="brand">
-        <img class="brand-img" src="{{ asset('assets/images/logo.png')}}" alt="...">
-        <h2 class="brand-text">Remark</h2>
+        <img class="brand-img" src="{{ asset('assets/images/logo@2x.png')}}" alt="...">
+        <h2 class="brand-text">HugElz</h2>
       </div>
 
       @if (count($errors) > 0)
@@ -99,7 +99,7 @@
       <p>Still no account? Please go to <a href="{{ url('/auth/register') }}">Register</a></p>
 
       <footer class="page-copyright">
-        <p>WEBSITE BY amazingSurge</p>
+        <p>WEBSITE BY HUGELZ</p>
         <p>© 2015. All RIGHT RESERVED.</p>
         <div class="social">
           <a href="javascript:void(0)">

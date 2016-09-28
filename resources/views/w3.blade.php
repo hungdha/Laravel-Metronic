@@ -71,7 +71,7 @@ h2 {
   float:left;
   letter-spacing:4px;
   font-size:17px;
-  line-height:71px;
+  line-height:47px;
 }
 .w3-topnav a:hover {
   background-color:white;
@@ -399,7 +399,7 @@ footer a {
   background-color:#62A8EA !important;
 }
 .w3-auth{
-  display: none;
+  display: block;
 }
 </style>
 <!--[if lt IE 9]>
@@ -407,14 +407,9 @@ footer a {
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <body class="hunglv-creater" >
-<div class="w3-auth" >
-	<a href="{{ url('/auth/register') }}" class="w3-btn w3-theme" >Register</a>
-	<a href="{{ url('/auth/login') }}" class="w3-btn">Sign In</a>
-</div>
+
 <div class='w3-container top'>
-	<!--<a href='http://www.w3schools.com'><img src='/images/w3schools.png' alt='W3Schools.com' class='w3-fluid'></a>-->
-	
-	<a class='w3schools-logo' href='/'>ws</a>
+	<a href='http://www.w3schools.com'><img src='{{ asset('sites/images/logo_s.png')}}' alt='huglez.com' class='w3-fluid' style="width: 100px;" ></a>	
 
 	<div class='w3-right toptext w3-wide'>THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
 </div>
@@ -426,7 +421,7 @@ footer a {
   <a href="javascript:void(0)" id="navbtn_references" onclick="w3_open_nav('references')">REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
   <a href="javascript:void(0)" id="navbtn_examples" onclick="w3_open_nav('examples')">EXAMPLES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
   <a href='javascript:void(0);' class='topnav-icons fa fa-search w3-right' onclick="w3_open_nav('search')" title='Search W3Schools'></a>
-  <a href='javascript:void(0);' class='topnav-icons fa fa-globe w3-right' onclick="w3_open_nav('translate')" title='Translate W3Schools'></a>
+ 
   </div>
 </div>
 
@@ -569,17 +564,11 @@ footer a {
   </div>
 </nav>
 
-<nav id="nav_translate" class="w3-dropnav w3-light-grey w3-card-2 w3-center">
-  <span onclick="w3_close_nav('translate')" class="w3-closebtn w3-xlarge">&times;</span><br><br>
-  Translate w3schools.com:
-  <div id='google_translate_element'></div>
-  <br>
-</nav>
 
 <nav id="nav_search" class="w3-dropnav w3-light-grey w3-card-2 w3-center">
   <span onclick="w3_close_nav('search')" class="w3-closebtn w3-xlarge">&times;</span><br><br>
   <div class="searchdiv">
-    Search w3schools.com:
+    Search
     <div id='googleSearch'><div class='gcse-search'></div></div>
   </div>
   <br>
@@ -628,44 +617,13 @@ footer a {
   <p>The language for building web pages</p>
   <a href="html/default.html" class="w3-btn sectionbtn">LEARN HTML</a>
   <a href="tags/default.html" class="w3-btn sectionbtn">HTML REFERENCE</a>
-  </div>
-  <div class="w3-col l6 section sectionexample">
-    <div class="w3-example w3-padding-16 w3-margin-0">
-    <h4>HTML Example:</h4>
-    <div class="w3-code htmlHigh notranslate">
-    &lt;!DOCTYPE html&gt;<br>
-    &lt;html&gt;<br>
-    &lt;title&gt;HTML Tutorial&lt;/title&gt;<br>
-    &lt;body&gt;<br><br>
-    &lt;h1&gt;This is a heading&lt;/h1&gt;<br>
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
-    &lt;/body&gt;<br>
-    &lt;/html&gt;
-    </div>
-    <a href="html/tryitfb35.html?filename=tryhtml_default" target="_blank" class="w3-btn w3-theme">Try it Yourself</a>
-    </div>
-  </div>
-</div>
+  </div> 
 <div class="w3-row w3-light-grey">
   <div class="w3-col l6 w3-center section css-hide-when-large">
   <h1>CSS</h1>
   <p>The language for styling web pages</p>
   <a href="css/default.html" class="w3-btn sectionbtn">LEARN CSS</a>
-  <a href="cssref/default.html" class="w3-btn sectionbtn">CSS REFERENCE</a>  
-  </div>
-  <div class="w3-col l6 section sectionexample" style="padding-top:40px;">
-  <h4>CSS Example:</h4>
-  <div class="w3-code cssHigh notranslate w3-card-2">
-  body {<br>
-  &nbsp;&nbsp;&nbsp; background-color: #d0e4fe;<br>}<br>h1 {<br>
-  &nbsp;&nbsp;&nbsp; color: orange;<br>
-  &nbsp;&nbsp;&nbsp; text-align: center;<br>}<br>p {<br>
-  &nbsp;&nbsp;&nbsp; font-family: &quot;Times New Roman&quot;;<br>
-  &nbsp;&nbsp;&nbsp; font-size: 20px;<br>
-  }
-  </div>
-  <a href="css/tryit438d.html?filename=trycss_default" target="_blank" class="w3-btn w3-theme">Try it Yourself</a>
-  </div>
+  <a href="cssref/default.html" class="w3-btn sectionbtn">CSS REFERENCE</a>    
   <div class="w3-col l6 w3-center section css-hide-when-small">
   <h1>CSS</h1>
   <p>The language for styling web pages</p>
@@ -679,20 +637,7 @@ footer a {
   <p>The language for programming web pages</p>
   <a href="js/default.html" class="w3-btn sectionbtn">LEARN JAVASCRIPT</a>
   <a href="jsref/default.html" class="w3-btn sectionbtn">JAVASCRIPT REFERENCE</a>  
-  </div>
-  <div class="w3-col l6 section sectionexample">
-    <div class="w3-example w3-padding-16 w3-margin-0">
-    <h4>JavaScript Example:</h4>
-    <div class="w3-code notranslate">
-    <div class="htmlHigh">&lt;script&gt;</div><div class="jsHigh">function myFunction() {<br>&nbsp;&nbsp;&nbsp; var x = 
-    document.getElementById(&quot;demo&quot;);<br>&nbsp;&nbsp;&nbsp; 
-    x.style.fontSize = &quot;25px&quot;; <br>&nbsp;&nbsp;&nbsp; x.style.color = 
-    &quot;red&quot;; <br>}<br></div><div class="htmlHigh">&lt;/script&gt;<br><br>&lt;button onclick=&quot;myFunction()&quot;&gt;Click 
-    Me!&lt;/button&gt;</div>
-    </div>
-    <a href="js/tryit8004.html?filename=tryjs_default" target="_blank" class="w3-btn w3-theme">Try it Yourself</a>
-    </div>
-  </div>
+  </div>  
 </div>
 <div class="w3-row w3-light-grey">
   <div class="w3-col l4 w3-center section onethird">
@@ -753,6 +698,15 @@ footer a {
     <div id="popupframe"></div>
     <div id="popupDIV"></div>
   </div>
+  <div class="w3-auth1" >
+  @if( Auth::user() )
+     <a href="{{ url('/admin/v1') }}" class="w3-btn w3-theme" >Administrator</a>
+     <a href="{{ url('/auth/logout') }}" class="w3-btn" >Logout</a>
+  @else
+    <a href="{{ url('/auth/register') }}" class="w3-btn w3-theme" >Register</a>
+    <a href="{{ url('/auth/login') }}" class="w3-btn">Sign In</a>
+  @endif
+</div>
 </footer>
 </div>
 <script>
@@ -792,7 +746,7 @@ function w3_open_nav(x) {
     w3_close_nav("tutorials");
     w3_close_nav("references");
     w3_close_nav("examples");
-    w3_close_nav("translate");
+    //w3_close_nav("translate");
     w3_close_nav("search");
     document.getElementById("nav_" + x).style.display = "block";
     if (document.getElementById("navbtn_" + x)) {
