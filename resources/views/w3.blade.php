@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<title>Online Web Tutorials</title>
+<title>Home | HUGELZ.COM</title>
 
-<!-- Mirrored from www.w3schools.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 05:30:35 GMT -->
+<!-- Mirrored from www.hugelz.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 05:30:35 GMT -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,DOM,jQuery,ASP,PHP,SQL,XML,Bootstrap,Web,W3C,tutorials,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,colors,demos,tips,w3c">
@@ -43,7 +43,7 @@ h2 {
   overflow:hidden;
   font-size:15px;
 }
-.w3schools-logo {
+.hugelz-logo {
     font-family:fontawesome;
     text-decoration:none;
 	line-height: 1;
@@ -57,10 +57,10 @@ h2 {
 	top:17px;
 	padding-left:2px;
 }
-.w3schools-logo .dotcom {
+.hugelz-logo .dotcom {
     color:#4CAF50;
 }
-.w3schools-logo:hover {
+.hugelz-logo:hover {
     color:#555555;
 }
 
@@ -75,7 +75,7 @@ h2 {
 }
 .w3-topnav a:hover {
   background-color:white;
-  color:#4CAF50;
+  color:#e6e7e8;
 }
 .topnavlinks {
   width:auto;
@@ -314,7 +314,7 @@ footer a {
     display:block;
     margin:auto;
   }
-  .top .w3schools-logo {
+  .top .hugelz-logo {
     position:relative;
     top:0;
     width:100%;
@@ -396,7 +396,7 @@ footer a {
 .w3-theme {
   color:#fff !important;
   /*background-color:#4CAF50 !important;*/
-  background-color:#62A8EA !important;
+  background-color:#ed1c24 !important;
 }
 .w3-auth{
   display: block;
@@ -409,7 +409,7 @@ footer a {
 <body class="hunglv-creater" >
 
 <div class='w3-container top'>
-	<a href='http://www.w3schools.com'><img src='{{ asset('sites/images/logo_s.png')}}' alt='huglez.com' class='w3-fluid' style="width: 100px;" ></a>	
+	<a href='http://www.hugelz.com'><img src='{{ asset('sites/images/logo_s.png')}}' alt='huglez.com' class='w3-fluid' style="width: 100px;" ></a>	
 
 	<div class='w3-right toptext w3-wide'>THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
 </div>
@@ -420,7 +420,7 @@ footer a {
   <a href="javascript:void(0)" id="navbtn_tutorials" onclick="w3_open_nav('tutorials')">TUTORIALS <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
   <a href="javascript:void(0)" id="navbtn_references" onclick="w3_open_nav('references')">REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
   <a href="javascript:void(0)" id="navbtn_examples" onclick="w3_open_nav('examples')">EXAMPLES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
-  <a href='javascript:void(0);' class='topnav-icons fa fa-search w3-right' onclick="w3_open_nav('search')" title='Search W3Schools'></a>
+  <a href='javascript:void(0);' class='topnav-icons fa fa-search w3-right' onclick="w3_open_nav('search')" title='Search hugelz'></a>
  
   </div>
 </div>
@@ -683,17 +683,17 @@ footer a {
   <a href="cert/default.html"><button class="w3-btn w3-dark-grey w3-hover-black">WEB CERTIFICATES</button></a>
   <br>
   <nav class="about">
-  <a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+  <a href="http://hugelz.invisionzone.com/" target="_blank">FORUM</a> |
   <a href="about/default.html" target="_top">ABOUT</a>
   </nav>
   <br>
   <p class="w3-medium">
-  W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
+  HUGELZ is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
   Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
   While using this site, you agree to have read and accepted our <a href="about/about_copyright.html">terms of use</a>, <a href="about/about_privacy.html">cookie and privacy policy</a>.<br>
   <a href="about/about_copyright.html">Copyright 1999-2016</a> by Refsnes Data. All Rights Reserved.<br><br>
   </p>
-  <a href="javascript:void(0);" onclick="clickFBLike()" title="Like W3Schools on Facebook"><i class="fa fa-thumbs-o-up fa-2x"></i></a>
+  <a href="javascript:void(0);" onclick="clickFBLike()" title="Like hugelz on Facebook"><i class="fa fa-thumbs-o-up fa-2x"></i></a>
   <div id="fblikeframe">
     <div id="popupframe"></div>
     <div id="popupDIV"></div>
@@ -790,8 +790,5 @@ function hideFBLike() {
 }
 </script>
 <script src="{{ asset('sites/lib/w3codecolors.js')}}"></script>
-<script src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
 </body>
-
-<!-- Mirrored from www.w3schools.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 05:34:29 GMT -->
 </html> 
