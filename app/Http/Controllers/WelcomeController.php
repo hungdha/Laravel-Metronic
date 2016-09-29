@@ -30,6 +30,6 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('w3');
+		return view('home');
 	}	
 }
