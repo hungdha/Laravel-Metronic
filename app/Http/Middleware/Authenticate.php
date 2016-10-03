@@ -38,11 +38,15 @@ class Authenticate {
 			if ($request->ajax())
 			{
 				return response('Unauthorized.', 401);
+			
 			}
+			else if(\Session::get('locked') === true)
+        		return redirect('/lockscreen');
 			else
 			{
 				return redirect()->guest('auth/login');
 			}
+			
 		}
 
 		return $next($request);

@@ -1,7 +1,7 @@
-@extends('app')
+@extends('layouts.site')
 
 @section('content')
-<div class="container-fluid">
+<div class="w3-row w3-container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">

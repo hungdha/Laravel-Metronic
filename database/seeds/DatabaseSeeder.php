@@ -14,7 +14,14 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		// $this->call('UserTableSeeder');
+		$this->call('UserTableSeeder');
+	}
+
+}
+
+class BooksTableSeeder extends Seeder{
+	public function run(){
+
 	}
 
 }

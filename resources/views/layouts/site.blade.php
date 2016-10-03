@@ -390,7 +390,23 @@ footer a {
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <body class="hunglv-creater" >
-
+<div class="w3-container w3-xxx" >
+    @if( Auth::user() )
+        <ul class="">
+            <li>
+                <a href="{{ url('/admin/v1') }}"  >Welcome, {{Auth::user()->username}} <i class="fa fa-caret-down" style="display: inline;"></i></a>       
+                <ul class="">
+                    <li><a href="{{ action('Auth\UserController@profile', Auth::user()->username ) }}"  >Profile</a></li>
+                    <li><a href="{{ url('/admin/v1') }}"  >Administrator</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ url('/auth/logout') }}" >Logout</a></li>
+       </ul>
+    @else
+      <a href="{{ url('/auth/register') }}"  >Register</a>
+      <a href="{{ url('/auth/login') }}" >Sign In</a>
+    @endif
+  </div>
 <div class='w3-container top'>
 	<a href='http://www.hugelz.com'><img src='{{ asset('sites/images/logo_s.png')}}' alt='huglez.com' class='w3-fluid' style="width: 100px;" ></a>	
 
@@ -557,7 +573,7 @@ footer a {
   <br>
 </nav>
 
-<nav id="sidemenu" class="w3-sidenav w3-card-2 w3-animate-left" style="display:none;">
+<nav id="sidemenu" class="w3-sidenav w3-animate-left" style="display:none;">
 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-closebtn w3-large">&times;</a><br>
 	<h2>HTML and CSS</h2>
 	<a href="html/default.html">Learn HTML</a>
@@ -599,9 +615,7 @@ footer a {
 <!--- END MAIN -->
 
 <!--- BEGIN FOOTER -->
-<footer class="w3-container w3-light-grey w3-center w3-padding-jumbo w3-opacity">
-  <a href="cert/default.html"><button class="w3-btn w3-dark-grey w3-hover-black">WEB CERTIFICATES</button></a>
-  <br>
+<footer class="w3-container w3-light-grey w3-center w3-padding-jumbo w3-opacity">  
   <nav class="about">
   <a href="http://hugelz.invisionzone.com/" target="_blank">FORUM</a> |
   <a href="about/default.html" target="_top">ABOUT</a>
@@ -612,16 +626,7 @@ footer a {
   Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
   While using this site, you agree to have read and accepted our <a href="about/about_copyright.html">terms of use</a>, <a href="about/about_privacy.html">cookie and privacy policy</a>.<br>
   <a href="about/about_copyright.html">Copyright 1999-2016</a> by Refsnes Data. All Rights Reserved.<br><br>
-  </p>  
-  <div class="w3-xxx" >
-    @if( Auth::user() )
-       <a href="{{ url('/admin/v1') }}" class="w3-btn w3-theme" >Administrator</a>
-       <a href="{{ url('/auth/logout') }}" class="w3-btn" >Logout</a>
-    @else
-      <a href="{{ url('/auth/register') }}" class="w3-btn w3-theme" >Register</a>
-      <a href="{{ url('/auth/login') }}" class="w3-btn">Sign In</a>
-    @endif
-  </div>
+  </p>    
 </footer>
 <!--- END FOOTER -->
 <script>
