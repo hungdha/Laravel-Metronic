@@ -17,8 +17,13 @@ class ProductController extends Controller
 		return view('admin.products.management', ['products' => $products ]);
 	}
 	public function products( Request  $request ){
+		
+		$products  = DB::table('products')
+            ->join('categories', 'categories.CategoryID', '=', 'products.ProductID')
+            ->join('suppliers', 'suppliers.SupplierID', '=', 'products.SupplierID')
+            ->select('products.*', 'categories.CategoryName', 'suppliers.CompanyName')
+            ->get();
 
-		//var_dump( $request ); exit;
 		$iTotalRecords = 2430;
 		$iDisplayLength = intval($request['length']);
 		$iDisplayLength = $iDisplayLength < 0 ? $iTotalRecords : $iDisplayLength; 
@@ -49,7 +54,7 @@ class ProductController extends Controller
 				rand(5,4000),
 				'05/01/2011',
 				'<span class="label label-sm label-'.(key($status)).'">'.(current($status)).'</span>',
-				'<a href="ecommerce_products_edit.html" class="btn btn-xs default btn-editable"><i class="fa fa-pencil"></i> Edit</a>',
+				'<a href="/admin/product/products" class="btn btn-xs default btn-editable"><i class="fa fa-pencil"></i> Edit</a>',
 				);
 		}
 
