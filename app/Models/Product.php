@@ -14,7 +14,9 @@ class Product extends Model{
         'UnitsInStock',
         'UnitsOnOrder',
         'ReorderLevel',
-        'Discontinued'
+        'Discontinued',
+        'DateCreated',
+        'Status'
     ];
     
     

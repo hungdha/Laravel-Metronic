@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <title>Metronic | Metronic | Admin Dashboard Template</title>
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta content="" name="description">
@@ -26,7 +26,7 @@
 <!-- BEGIN BODY -->
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
-<body>
+<body class="hugelz-body" >
 <!-- BEGIN HEADER -->
 <div class="page-header">
   <!-- BEGIN HEADER TOP -->
@@ -34,7 +34,7 @@
     <div class="container-fluid">
       <!-- BEGIN LOGO -->
       <div class="page-logo">
-        <a href="index.html"><img src="{{ asset('assets/admin/layout3/img/logo-default.png')}}" alt="logo" class="logo-default"></a>
+        <a href="{{ url('admin/dashboard/index')}}"><img src="{{ asset('assets/admin/layout3/img/logo-default.png')}}" alt="logo" class="logo-default"></a>
       </div>
       <!-- END LOGO -->
       <!-- BEGIN RESPONSIVE MENU TOGGLER -->

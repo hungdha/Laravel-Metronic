@@ -32,23 +32,22 @@ class Authenticate {
 	 * @return mixed
 	 */
 	public function handle($request, Closure $next)
-	{
+	{		
 		if ($this->auth->guest())
 		{
 			if ($request->ajax())
 			{
 				return response('Unauthorized.', 401);
 			
-			}
-			else if(\Session::get('locked') === true)
-        		return redirect('/lockscreen');
+			}			
 			else
 			{
 				return redirect()->guest('auth/login');
 			}
-			
 		}
-
+		if(\Session::get('locked') === true){			
+        		return redirect('lockscreen');
+		}		
 		return $next($request);
 	}
 

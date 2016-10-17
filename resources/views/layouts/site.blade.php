@@ -384,29 +384,201 @@ footer a {
 .w3-auth{
   display: block;
 }
+
+/* Menu */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: right;
+  /*background: #ED1C24;*/
+  border-bottom: 1px solid #fff;
+  border-radius: 3px;    
+}
+
+nav li {
+  float: left;          
+}
+
+nav #login {
+  border-right: 1px solid #ddd;
+  box-shadow: 1px 0 0 #fff;  
+}
+
+nav #login-trigger,
+nav #signup a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 25px;
+  line-height: 25px;
+  font-weight: bold;
+  padding: 0 8px;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 #fff; 
+}
+
+nav #signup a {
+  border-radius: 0 3px 3px 0;
+}
+
+nav #login-trigger {
+  border-radius: 3px 0 0 3px;
+}
+
+nav #login-trigger:hover,
+nav #login .active,
+nav #signup a:hover {
+  background: #fff;
+}
+
+nav #login-content {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  z-index: 999;    
+  background: #fff;
+  background-image: linear-gradient(top, #fff, #eee);  
+  padding: 15px;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
+  border-radius: 3px 0 3px 3px;
+}
+
+nav li #login-content {
+  right: 0;
+  width: 250px;  
+}
+
+/*--------------------*/
+
+#inputs input {
+  background: #f1f1f1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #ccc inset;
+}
+
+#inputs input:focus {
+  background-color: #fff;
+  border-color: #e8c291;
+  outline: none;
+  box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+
+#login #actions {
+  margin-top: 10px;
+}
+
+#login #submit {    
+  background-color: #d14545;
+  background-image: linear-gradient(top, #e97171, #d14545);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: 1px solid #7e1515;
+  float: left;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial, Helvetica;
+  color: #fff;
+}
+
+#login #submit:hover,
+#login #submit:focus {    
+  background-color: #e97171;
+  background-image: linear-gradient(top, #d14545, #e97171);
+} 
+
+#login #submit:active {   
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;   
+}
+
+#login #submit::-moz-focus-inner {
+  border: none;
+}
+
+#login label {
+  float: right;
+  line-height: 30px;
+}
+
+#login label input {
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+
+
+/* new */
+#dropdown ul { 
+  position: absolute;
+  top: 100%;
+  left: -4px; /* move content -4px because of container left border */
+  width: 266px;
+  padding: 5px 0px;
+  display: none;
+  border-left: 4px solid #8e9196;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+#dropdown ul li { font-size: 0.9em; }
+
+#dropdown ul li a { 
+  text-decoration: none;
+  display: block;
+  color: #447dd3;
+  padding: 7px 15px;
+}
+#dropdown ul li a:hover {
+  color: #6fa0e9;
+  background: #e7f0f7;
+}
 </style>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<body class="hunglv-creater" >
-<div class="w3-container w3-xxx" >
-    @if( Auth::user() )
-        <ul class="">
-            <li>
-                <a href="{{ url('/admin/v1') }}"  >Welcome, {{Auth::user()->username}} <i class="fa fa-caret-down" style="display: inline;"></i></a>       
-                <ul class="">
-                    <li><a href="{{ action('Auth\UserController@profile', Auth::user()->username ) }}"  >Profile</a></li>
-                    <li><a href="{{ url('/admin/v1') }}"  >Administrator</a></li>
-                </ul>
-            </li>
-            <li><a href="{{ url('/auth/logout') }}" >Logout</a></li>
-       </ul>
-    @else
-      <a href="{{ url('/auth/register') }}"  >Register</a>
-      <a href="{{ url('/auth/login') }}" >Sign In</a>
-    @endif
-  </div>
+<body class="hugelz-body" >
+<div class="w3-container">
+  <nav>
+    <ul>
+      <li>
+        <span id="time">02:00</span> minutes!
+      </li>
+      <li id="login">
+        <a id="login-trigger" href="#">
+          My Account <span>▼</span>
+        </a>
+        <div id="login-content">
+            <ul id="dropdown">
+                <li><a href="{{ url('/admin/dashboard') }}">Administrators</a></li>                
+            </ul>
+        </div>                     
+      </li>
+      <li id="signup">
+        <a href="{{ url('/auth/logout') }}">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+
 <div class='w3-container top'>
 	<a href='http://www.hugelz.com'><img src='{{ asset('sites/images/logo_s.png')}}' alt='huglez.com' class='w3-fluid' style="width: 100px;" ></a>	
 
@@ -629,6 +801,8 @@ footer a {
   </p>    
 </footer>
 <!--- END FOOTER -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 function w3_open() {
   if (w3_getStyleValue(document.getElementById("menubtn"), "background-repeat") == "repeat-x") {
@@ -692,7 +866,60 @@ function open_xs_menu(x) {
     document.getElementById("sectionxs_" + x).innerHTML = "";
   }
 }
+$(document).ready(function(){
+  $('#login-trigger').click(function(){
+    $(this).next('#login-content').slideToggle();
+    $(this).toggleClass('active');          
+    
+    if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+      else $(this).find('span').html('&#x25BC;')
+    })
+});
 
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+function countDownTimer() {
+    resetTimer();
+    var fiveMinutes = 20,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+
+};
+
+var autoLockTimer;
+window.onload = countDownTimer;
+
+//window.onmousemove = resetTimer;
+//window.onmousedown = resetTimer; // catches touchscreen presses
+window.onclick = resetTimer;     // catches touchpad clicks
+//window.onscroll = resetTimer;    // catches scrolling with arrow keys
+//window.onkeypress = resetTimer;
+
+function lockScreen() {
+
+    window.location.href = "<?php echo 'http://localhost:7777/lockscreen'; ?>";
+}
+
+function resetTimer() {
+    
+    clearTimeout(autoLockTimer);
+    autoLockTimer = setTimeout(lockScreen, 20000 );  // time is in milliseconds
+}
 </script>
 <script src="{{ asset('sites/lib/w3codecolors.js')}}"></script>
 </body>
