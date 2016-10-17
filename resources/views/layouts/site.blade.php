@@ -912,7 +912,7 @@ window.onclick = resetTimer;     // catches touchpad clicks
 
 function lockScreen() {
 
-    window.location.href = "<?php echo 'http://localhost:7777/lockscreen'; ?>";
+    window.location.href = "/lockscreen";
 }
 
 function resetTimer() {
