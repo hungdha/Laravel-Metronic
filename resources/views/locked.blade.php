@@ -68,7 +68,7 @@
 		</div>
 	</div>
 	<div class="page-footer-custom">
-		 2014 &copy; Metronic. Admin Dashboard Template.
+		 2016 &copy; Metronic. Admin Dashboard Template.
 	</div>
 </div>
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
@@ -97,10 +97,10 @@
 <script src="../../assets/admin/pages/scripts/lock.js"></script>
 <script>
 jQuery(document).ready(function() {    
-   Metronic.init(); // init metronic core components
-Layout.init(); // init current layout
-Demo.init(); // init demo features
-   Lock.init();
+	Metronic.init(); // init metronic core components
+	Layout.init(); // init current layout
+	Demo.init(); // init demo features
+	Lock.init();
 });
 </script>
 <!-- END JAVASCRIPTS -->

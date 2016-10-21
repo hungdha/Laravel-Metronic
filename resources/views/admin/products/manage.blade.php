@@ -1,17 +1,17 @@
 @extends('admin.layouts.master')
 @section('styles')
-	<!-- BEGIN PAGE LEVEL STYLES -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/select2/select2.css') }}"/>
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/bootstrap-datepicker/css/datepicker.css') }}" />
-	<!-- END PAGE LEVEL STYLES -->
-	<!-- BEGIN THEME STYLES -->
-	<link href="{{ asset('assets/global/css/components.css') }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('assets/global/css/plugins.css') }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('assets/admin/layout3/css/layout.css') }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('assets/admin/layout3/css/themes/default.css') }}" rel="stylesheet" type="text/css" id="style_color">
-	<link href="{{ asset('assets/admin/layout3/css/custom.css') }}" rel="stylesheet" type="text/css">
-	<!-- END THEME STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/select2/select2.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/global/plugins/bootstrap-datepicker/css/datepicker.css') }}" />
+<!-- END PAGE LEVEL STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="{{ asset('assets/global/css/components.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('assets/global/css/plugins.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('assets/admin/layout3/css/layout.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('assets/admin/layout3/css/themes/default.css') }}" rel="stylesheet" type="text/css" id="style_color">
+<link href="{{ asset('assets/admin/layout3/css/custom.css') }}" rel="stylesheet" type="text/css">
+<!-- END THEME STYLES -->
 @endsection
 @section('content')	
 <div class="container-fluid" >
